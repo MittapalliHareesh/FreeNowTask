@@ -22,8 +22,8 @@ class POIListViewModel @Inject constructor(private val repository: POIListReposi
 
     /**
      * It initiate call to APIService class to fetch response.
-     * Response status either be any one the states SUCCESS or ERROR or LOADING. Based state data
-     * will be populated to View.
+     * Response status either be any one the states SUCCESS or ERROR or LOADING. Based on state
+     * data will be populated to View.
      */
     fun getPoiList() = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
@@ -46,6 +46,12 @@ class POIListViewModel @Inject constructor(private val repository: POIListReposi
         }
     }
 
+    /**
+     * While fetching data from server sometimes it may through error's. It's either server not found
+     * or unauthorised access or server url not found. Handled different error codes here.
+     *
+     * @param httpCode Indicated error response code.
+     */
     private fun getErrorMessage(httpCode: Int): String {
         return when (httpCode) {
             401 -> "Accessing Unauthorised request"

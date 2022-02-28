@@ -7,6 +7,11 @@ import com.freenow.task.R
 import com.freenow.task.model.PoiItem
 import kotlin.math.floor
 
+/**
+ * This minimizes the necessary code in your application logic to connect to the user interface element.
+ * & To make clean and re-usable code by using concept of DataBinding setting values for UI elements.
+ */
+
 @BindingAdapter("taxiImage")
 fun AppCompatImageView.setTaxiImage(poiItem: PoiItem) {
 

@@ -1,7 +1,7 @@
 package com.freenow.task.api
 
 import com.freenow.task.repository.POIListRepository
-import com.freenow.task.util.UiUtils
+import com.freenow.task.util.APPConstants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -12,11 +12,16 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+/**
+ * This class creates a object of Retrofit & Using that it will create a service.
+ * Developed using HILT DI
+ */
+
 @Module
 @InstallIn(SingletonComponent::class)
 object ApiModule {
 
-    private const val BASE_URL = UiUtils.baseUrl
+    private const val BASE_URL = APPConstants.baseUrl
 
     @Singleton
     @Provides

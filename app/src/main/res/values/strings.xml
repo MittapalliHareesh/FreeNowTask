@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FreeNowTask</string>
+    <string name="app_name">FreeNow</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="poiLIst_label">POIListFragment</string>
@@ -9,6 +9,6 @@
     <string name="heading">Heading</string>
     <string name="taxi_pooling">POOLING</string>
     <string name="taxi">TAXI</string>
-    <string name="selectedPoi">selectedPoI</string>
+    <string name="poiData">poiData</string>
     <string name="noInternet">Couldn\'t able to load data due to Connection lost.\n\nPlease check Network Settings.</string>
 </resources>

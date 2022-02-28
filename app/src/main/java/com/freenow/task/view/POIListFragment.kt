@@ -20,6 +20,7 @@ import com.freenow.task.util.Resource
 import com.freenow.task.util.Status
 import com.freenow.task.viewModel.POIListViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import java.io.Serializable
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -29,6 +30,7 @@ class POIListFragment : Fragment() {
 
     private lateinit var poiListFragmentBinding: PoiListFragmentBinding
     private val poiListViewModel: POIListViewModel by viewModels()
+    private lateinit var poiItemList: List<PoiItem>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -60,7 +62,8 @@ class POIListFragment : Fragment() {
         poiListFragmentBinding.rcvAppliance.apply {
             adapter = PoiListAdapter(object : PoiListAdapter.OnItemClickListener {
                 override fun onImageClick(poiItem: PoiItem) {
-                    bundle.putSerializable(getString(R.string.selectedPoi), poiItem)
+                    poiItem.selectedPOI = true
+                    bundle.putSerializable(getString(R.string.poiData), poiItemList as Serializable)
                     findNavController().navigate(
                         R.id.action_POIListFragment_to_MapFragment,
                         bundle
@@ -72,11 +75,17 @@ class POIListFragment : Fragment() {
         }
         poiListViewModel.getPoiList().observe(viewLifecycleOwner) {
             it?.let { resource ->
+                if (resource.status == Status.SUCCESS) {
+                    poiItemList = resource.data!!
+                }
                 renderUiState(resource)
             }
         }
     }
 
+    /**
+     * Based on api response status UI will be updated.
+     */
     private fun renderUiState(resource: Resource<List<PoiItem>>) {
         when (resource.status) {
             Status.SUCCESS -> {

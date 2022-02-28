@@ -2,11 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.freenow.task">
 
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:name=".MainApplication"
@@ -26,11 +26,17 @@
             </intent-filter>
         </activity>
 
+        <!--geo. API_KEY is the recommended metadata name for the API key. A key with this name
+         can be used to authenticate to multiple Google Maps-based APIs on the Android platform,
+         including the Google Maps Android API-->
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAdj7ap5LNAXfogRuiyrpEmWspzELfxsgY" />
 
-        <!--To fix crash "java.lang.NoClassDefFoundError: Failed resolution of: Lorg/apache/http/ProtocolVersion;" Adding apache library-->
+        <!--To fix crash "java.lang.NoClassDefFoundError: Failed resolution of:
+        Lorg/apache/http/ProtocolVersion;" Adding apache library-->
+
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />

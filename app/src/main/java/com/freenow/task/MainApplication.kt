@@ -10,6 +10,4 @@ import dagger.hilt.android.HiltAndroidApp
  * And annotation enables member injection (i.e) field and method injection in your Application class.
  */
 @HiltAndroidApp
-class MainApplication : Application() {
-
-}
+class MainApplication : Application()

@@ -1,0 +1,58 @@
+{
+  "poiList": [
+    {
+      "id": 370920,
+      "coordinate": {
+        "latitude": 53.61836279236202,
+        "longitude": 10.086479111368927
+      },
+      "fleetType": "POOLING",
+      "heading": 13.54014948696912
+    },
+    {
+      "id": 137537,
+      "coordinate": {
+        "latitude": 53.46268219647566,
+        "longitude": 9.788085080167544
+      },
+      "fleetType": "TAXI",
+      "heading": 68.21468688631018
+    },
+    {
+      "id": 723579,
+      "coordinate": {
+        "latitude": 53.45240783059604,
+        "longitude": 9.796077118755925
+      },
+      "fleetType": "TAXI",
+      "heading": 176.81520653268086
+    },
+    {
+      "id": 150986,
+      "coordinate": {
+        "latitude": 53.54180756177628,
+        "longitude": 9.879750231665458
+      },
+      "fleetType": "POOLING",
+      "heading": 48.54349609132989
+    },
+    {
+      "id": 609415,
+      "coordinate": {
+        "latitude": 53.58558833578074,
+        "longitude": 10.02824644156691
+      },
+      "fleetType": "TAXI",
+      "heading": 60.39841465078456
+    },
+    {
+      "id": 166908,
+      "coordinate": {
+        "latitude": 53.68702126476507,
+        "longitude": 10.098893807842012
+      },
+      "fleetType": "POOLING",
+      "heading": 252.67366841420395
+    }
+  ]
+}
