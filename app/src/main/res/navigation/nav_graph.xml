@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/POIListFragment">
+
+    <fragment
+        android:id="@+id/POIListFragment"
+        android:name="com.freenow.task.view.POIListFragment"
+        android:label="@string/poiLIst_label"
+        tools:layout="@layout/poi_list_fragment">
+
+        <action
+            android:id="@+id/action_POIListFragment_to_MapFragment"
+            app:destination="@id/MapFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/MapFragment"
+        android:name="com.freenow.task.view.MapFragment"
+        android:label="@string/map_label"
+        tools:layout="@layout/map_fragment" />
+</navigation>

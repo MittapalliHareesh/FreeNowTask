@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:onClick="@{()->clickListener.onImageClick(poiItem)}">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fleetTypeImg"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:taxiImage="@{poiItem}"
+            tools:src="@mipmap/ic_taxi" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/idTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/id"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintStart_toEndOf="@id/fleetTypeImg"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="ID" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/idTxtValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            app:idValue="@{poiItem}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="434343" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fleetTypeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="@string/fleetType"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintStart_toEndOf="@id/fleetTypeImg"
+            app:layout_constraintTop_toBottomOf="@id/idTxt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fleetTypeTxtValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            app:fleetTypeValue="@{poiItem}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/idTxtValue"
+            tools:text="POOLING" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/headingTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="@string/heading"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintStart_toEndOf="@id/fleetTypeImg"
+            app:layout_constraintTop_toBottomOf="@id/fleetTypeTxt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/headingTxtValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            app:headingValue="@{poiItem}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fleetTypeTxtValue"
+            tools:text="HEADING" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="com.freenow.task.adapter.PoiListAdapter.OnItemClickListener" />
+
+        <variable
+            name="poiItem"
+            type="com.freenow.task.model.PoiItem" />
+
+    </data>
+
+</layout>

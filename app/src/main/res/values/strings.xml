@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FreeNowTask</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="poiLIst_label">POIListFragment</string>
+    <string name="map_label">MapFragment</string>
+    <string name="id">Id</string>
+    <string name="fleetType">FleetType</string>
+    <string name="heading">Heading</string>
+    <string name="taxi_pooling">POOLING</string>
+    <string name="taxi">TAXI</string>
+    <string name="selectedPoi">selectedPoI</string>
+    <string name="noInternet">Couldn\'t able to load data due to Connection lost.\n\nPlease check Network Settings.</string>
+</resources>
