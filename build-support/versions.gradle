@@ -37,7 +37,6 @@ ext.builddeps = [
                 navigation_fragment: 'androidx.navigation:navigation-fragment-ktx:2.3.5',
                 navigation_ui_ktx  : 'androidx.navigation:navigation-ui-ktx:2.3.5',
         ],
-        //TODO HAREESH check here library version number
         play_services        : "com.google.android.gms:play-services:12.0.1",
         play_maps            : "com.google.android.gms:play-services-maps:12.0.1",
         material             : 'com.google.android.material:material:1.4.0',
